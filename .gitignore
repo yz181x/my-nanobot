@@ -24,5 +24,18 @@ nano.*.save
 .DS_Store
 uv.lock
 
-.nanobot/
+# 1. 忽略 .nanobot 文件夹下的所有内容
+.nanobot/*
+
+# 2. 允许进入 workspace 目录（这是关键，否则 Git 不会往下看）
+!.nanobot/workspace/
+
+# 3. 再次忽略 workspace 目录下的所有内容
+.nanobot/workspace/*
+
+# 4. 排除（即跟踪）你想保留的文件和子目录
+!.nanobot/workspace/skills/
+
+
+
 
